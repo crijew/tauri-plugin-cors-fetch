@@ -207,7 +207,7 @@ class CORSFetch {
           if (!(key in target)) {
             Object.assign(output, { [key]: source[key] });
           } else {
-            output[key] = deepMerge(target[key], source[key]);
+            output[key] = this._deepMerge(target[key], source[key]);
           }
         } else {
           Object.assign(output, { [key]: source[key] });
